@@ -53,8 +53,12 @@ class Golf
 
   end
 
-  def self.hole8
-
+  def self.hole8(num_of_fibs)
+    fibs = [1,1]
+    (2..num_of_fibs - 1).each do |num|
+      fibs[num] = fibs[num - 1] + fibs[num - 2]
+    end
+    fibs
   end
 
   def self.hole9
