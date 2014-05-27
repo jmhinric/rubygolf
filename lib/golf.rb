@@ -14,8 +14,11 @@ class Golf
 
   end
   
-  def self.hole5
-  	
+  def self.hole5 a
+  	 a.map {|n|[n]} +
+  	 3.times.map {|i|a[i..i+1]} +
+  	 [a[0..2], a[1..3]] + 
+  	 [a]
   end
   
   def self.hole6
