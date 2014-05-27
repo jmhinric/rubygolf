@@ -11,8 +11,17 @@ class Golf
   	(1..a).reduce(:*)
   end
 
-  def self.hole4
-
+  def self.hole4 a
+    a.map do |b|
+      case b[0]
+      when "m"
+        "hat(#{b})"
+      when "d"
+        "#{b[0..-2]}(bone))"
+      when "c"
+        "dead#{b[3..-1]}"
+      end
+    end
   end
 
   def self.hole5
