@@ -4,3 +4,4 @@
 --format failing_example_groups:spec/failing_example_groups.report
 --format progress:spec/progress.report
 --format specdoc
+--format documentation
