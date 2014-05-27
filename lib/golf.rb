@@ -1,6 +1,6 @@
 class Golf
-  def self.hole1(array)
-    array.reduce(:*)
+  def self.hole1 a
+    a.reduce(:*)
   end
 
   def self.hole2
@@ -31,37 +31,37 @@ class Golf
   	 [a]
   end
 
-  def self.hole6(seq_length)
+  def self.hole6 a
     i = 1
-    answer = []
-    while i <= seq_length
+    b = []
+    while i <= a
       if i % 3 == 0 && i % 5 == 0
-        answer << "fizzbuzz"
+        b << "fizzbuzz"
       elsif i % 5 == 0
-        answer << "buzz"
+        b << "buzz"
       elsif i % 3 == 0
-        answer << "fizz"
+        b << "fizz"
       else
-        answer << i
+        b << i
       end
       i += 1
     end
-    answer
+    b
   end
 
   def self.hole7
 
   end
 
-  def self.hole8(num_of_fibs)
-    fibs = [1,1]
-    (2..num_of_fibs - 1).each do |num|
-      fibs[num] = fibs[num - 1] + fibs[num - 2]
+  def self.hole8 a
+    b = [1,1]
+    (2..a - 1).each do |num|
+      b[num] = b[num - 1] + b[num - 2]
     end
-    fibs
+    b
   end
 
-  def self.hole9(a)
+  def self.hole9 a
     a.split.map do |b|
       b.length > 10 ? "#{b[0..3]}...#{b[-3..-1]}" : b
     end.join(" ")
