@@ -28,8 +28,22 @@ class Golf
 
   end
 
-  def self.hole6
-
+  def self.hole6(seq_length)
+    i = 1
+    answer = []
+    while i <= seq_length
+      if i % 3 == 0 && i % 5 == 0
+        answer << "fizzbuzz"
+      elsif i % 5 == 0
+        answer << "buzz"
+      elsif i % 3 == 0
+        answer << "fizz"
+      else
+        answer << i
+      end
+      i += 1
+    end
+    answer
   end
 
   def self.hole7
