@@ -21,3 +21,5 @@ pkg
 .bundle
 spec/*.report
 Gemfile.lock
+
+.ruby-version
