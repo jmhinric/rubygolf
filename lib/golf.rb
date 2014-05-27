@@ -1,6 +1,6 @@
 class Golf
   def self.hole1(array)
-    array.reduce(1, :*) {|prod, num| num }
+    array.reduce(:*)
   end
 
   def self.hole2
