@@ -48,11 +48,7 @@ class Golf
         next if i <= l unless i == 0
         s = nil
 
-        puts "n = #{n}"
-
         a[i+1..-1].each_with_index {|n2,j|
-          puts "n2 = #{n2}"
-
           if n2 == n + j+1
             l = i + j + 1
             s = n2
