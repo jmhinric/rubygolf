@@ -10,6 +10,7 @@ class Golf
       ("a".."z").to_a
     end
 
+
     def hole3 a
     	(1..a).reduce(:*)
     end
@@ -40,8 +41,27 @@ class Golf
       end
     end
 
-    def hole7
+    def hole7 a
+      l = 0
+      r = []
+      a.each_with_index {|n,i|
+        next if i <= l unless i == 0
+        s = nil
 
+        puts "n = #{n}"
+
+        a[i+1..-1].each_with_index {|n2,j|
+          puts "n2 = #{n2}"
+
+          if n2 == n + j+1
+            l = i + j + 1
+            s = n2
+          end
+        }
+
+        r << (s ? "#{n}-#{s}" : n.to_s)
+      }
+      r
     end
 
     def hole8 a
