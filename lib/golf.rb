@@ -16,7 +16,7 @@ class Golf
     end
 
     def hole4 a
-      a.map do |b|
+      a.map {|b|
         case b[0]
         when "m"
           "hat(#{b})"
@@ -25,7 +25,7 @@ class Golf
         when "c"
           "dead#{b[3..-1]}"
         end
-      end
+      }
     end
 
     def hole5 a
@@ -36,25 +36,22 @@ class Golf
     end
 
     def hole6 a
-      (1..a).map do |i|
+      (1..a).map {|i|
         (i % 15 == 0 ? "fizzbuzz" : i % 5 == 0 ? "buzz" : i % 3 == 0 ? "fizz" : i)
-      end
+      }
     end
 
     def hole7 a
-      l = 0
-      r = []
+      l,r=[0,[]]
       a.each_with_index {|n,i|
         next if i <= l unless i == 0
         s = nil
-
         a[i+1..-1].each_with_index {|n2,j|
           if n2 == n + j+1
             l = i + j + 1
             s = n2
           end
         }
-
         r << (s ? "#{n}-#{s}" : n.to_s)
       }
       r
@@ -62,16 +59,16 @@ class Golf
 
     def hole8 a
       b = [1,1]
-      (2..a - 1).each do |num|
+      (2..a - 1).each {|num|
         b[num] = b[num - 1] + b[num - 2]
-      end
+      }
       b
     end
 
     def hole9 a
-      a.split.map do |b|
+      a.split.map {|b|
         b.length > 10 ? "#{b[0..3]}...#{b[-3..-1]}" : b
-      end.join(" ")
+      }.join(" ")
     end
   end
 
