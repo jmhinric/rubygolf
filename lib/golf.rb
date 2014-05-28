@@ -66,8 +66,8 @@ class Golf
 
     def hole8 a
       b = [1,1]
-      (2..a - 1).each do |num|
-        b[num] = b[num - 1] + b[num - 2]
+      (2..a - 1).each do |n|
+        b[n] = b[n - 1] + b[n - 2]
       end
       b
     end
