@@ -35,13 +35,9 @@ class Golf
     end
 
     def hole6 a
-      i = 1
-      b = []
-      while i <= a
-        b << (i % 15 == 0 ? "fizzbuzz" : i % 5 == 0 ? "buzz" : i % 3 == 0 ? "fizz" : i)
-        i += 1
+      (1..a).map do |i|
+        (i % 15 == 0 ? "fizzbuzz" : i % 5 == 0 ? "buzz" : i % 3 == 0 ? "fizz" : i)
       end
-      b
     end
 
     def hole7
