@@ -10,7 +10,6 @@ class Golf
       ("a".."z").to_a
     end
 
-
     def hole3 a
     	(1..a).reduce :*
     end
@@ -59,9 +58,7 @@ class Golf
 
     def hole8 a
       b = [1,1]
-      (2..a - 1).each {|num|
-        b[num] = b[num - 1] + b[num - 2]
-      }
+      (2..a - 1).each {|num| b[num] = b[num - 1] + b[num - 2] }
       b
     end
 
