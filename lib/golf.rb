@@ -3,7 +3,7 @@ class Golf
   class << self
 
     def hole1 a
-      a.reduce(:*)
+      a.reduce :*
     end
 
     def hole2
