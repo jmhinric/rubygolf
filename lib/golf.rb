@@ -38,15 +38,7 @@ class Golf
       i = 1
       b = []
       while i <= a
-        b << if i % 15 == 0
-          "fizzbuzz"
-        elsif i % 5 == 0
-          "buzz"
-        elsif i % 3 == 0
-          "fizz"
-        else
-          i
-        end
+        b << (i % 15 == 0 ? "fizzbuzz" : i % 5 == 0 ? "buzz" : i % 3 == 0 ? "fizz" : i)
         i += 1
       end
       b
