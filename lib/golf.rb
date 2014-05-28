@@ -74,7 +74,7 @@ class Golf
 
     def hole9 a
       a.split.map do |b|
-        b.length > 10 ? "#{b[0..3]}...#{b[-3..-1]}" : b
+        b.size > 10 ? "#{b[0..3]}...#{b[-3..-1]}" : b
       end.join(" ")
     end
   end
