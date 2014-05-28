@@ -43,7 +43,7 @@ class Golf
     def hole7 a
       l,r=[0,[]]
       a.each_with_index {|n,i|
-        next if i <= l unless i == 0
+        next if i <= l && i != 0
         s = nil
         a[i+1..-1].each_with_index {|n2,j|
           if n2 == n + j+1
