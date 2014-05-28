@@ -16,14 +16,8 @@ class Golf
 
     def hole4 a
       a.map {|b|
-        case b[0]
-        when "m"
-          "hat(#{b})"
-        when "d"
-          "#{b[0..-2]}(bone))"
-        when "c"
-          "dead#{b[3..-1]}"
-        end
+        c = b[0]
+        c == "m" ? "hat(#{b})" : c == "d" ? "#{b[0..-2]}(bone))" : "dead#{b[3..-1]}"
       }
     end
 
