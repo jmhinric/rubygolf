@@ -45,10 +45,10 @@ class Golf
       a.each_with_index {|n,i|
         next if i <= l unless i == 0
         s = nil
-        a[i+1..-1].each_with_index {|n2,j|
-          if n2 == n + j+1
+        a[i+1..-1].each_with_index {|z,j|
+          if z == n + j+1
             l = i + j + 1
-            s = n2
+            s = z
           end
         }
         r << (s ? "#{n}-#{s}" : n.to_s)
@@ -58,8 +58,8 @@ class Golf
 
     def hole8 a
       b = [1,1]
-      (2..a - 1).each {|num|
-        b[num] = b[num - 1] + b[num - 2]
+      (2..a - 1).each {|n|
+        b[n] = b[n - 1] + b[n - 2]
       }
       b
     end
