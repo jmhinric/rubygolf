@@ -3,16 +3,15 @@ class Golf
   class << self
 
     def hole1 a
-      a.reduce(:*)
+      a.reduce :*
     end
 
     def hole2
       ("a".."z").to_a
     end
 
-
     def hole3 a
-    	(1..a).reduce(:*)
+    	(1..a).reduce :*
     end
 
     def hole4 a
@@ -68,7 +67,7 @@ class Golf
     def hole9 a
       a.split.map {|b|
         b.length > 10 ? "#{b[0..3]}...#{b[-3..-1]}" : b
-      }.join(" ")
+      }.join " "
     end
   end
 
