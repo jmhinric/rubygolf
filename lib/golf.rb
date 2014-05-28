@@ -12,7 +12,7 @@ class Golf
 
 
     def hole3 a
-    	(1..a).reduce(:*)
+    	(1..a).reduce :*
     end
 
     def hole4 a
